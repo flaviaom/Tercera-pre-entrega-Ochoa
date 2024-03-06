@@ -1,0 +1,25 @@
+ <!-- Herencia HTML -->
+{% extends "padre.html" %}
+
+ <!-- Sección: Título -->
+{% block titulo %}
+CREAR USUARIO
+{% endblock %}
+
+ <!-- Subsección: Subtítulo -->
+{% block subtitulo %}
+Ingresa tus datos para registrarte
+{% endblock %}
+
+ <!-- Subsección: Párrafo -->
+{% block parrafo %}
+
+<form action="/AppSalud/crear_usuario/" method="post"> {% csrf_token %}
+
+{{formu}}
+
+<input type="submit" value="Registrar">
+
+</form>
+
+{% endblock %}
